@@ -35,7 +35,6 @@ namespace Google.XR.ARCoreExtensions.Internal
         public string IOSCloudServicesApiKey;
 
         // GUID to folder [ARCore Extensions]/Runtime
-        private const string _runtimeFolderGUID = "df6f7c8173aef4ce18044d1392042d34";
 
         private const string _runtimeConfigFolder = "/Configurations/RuntimeSettings";
 
@@ -50,7 +49,7 @@ namespace Google.XR.ARCoreExtensions.Internal
             }
 
             string folderPath =
-                AssetDatabase.GUIDToAssetPath(_runtimeFolderGUID) + _runtimeConfigFolder;
+                Application.dataPath + "/ARCoreExtensions" + _runtimeConfigFolder;
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
