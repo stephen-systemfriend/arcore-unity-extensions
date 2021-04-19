@@ -48,8 +48,7 @@ namespace Google.XR.ARCoreExtensions.Internal
                 return;
             }
 
-            string folderPath =
-                Application.dataPath + "/ARCoreExtensions" + _runtimeConfigFolder;
+            string folderPath = "Assets/ARCoreExtensions" + _runtimeConfigFolder;
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
